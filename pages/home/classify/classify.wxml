@@ -1,6 +1,6 @@
 <view class="container">
   <!-- 中间的两个元素 -->
-  <view class="card">
+  <view class="card" bindtap="onTapMaitreyaCard">
     <view class="image-container">
       <image src="../../../images/tangka2.png" class="card-image"></image>
     </view>

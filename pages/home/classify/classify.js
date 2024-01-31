@@ -62,5 +62,12 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+  onTapMaitreyaCard() {
+    // 在这里添加跳转到 "pages/home/show/show" 页面的代码
+    wx.navigateTo({
+      url: '/pages/home/show/show',
+    });
+  },
 })
