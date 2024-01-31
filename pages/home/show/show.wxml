@@ -1,10 +1,9 @@
-<!-- wxml -->
 <view class="container">
   <!-- 图片部分 -->
   <image src="../../../images/tangka1.png" mode="widthFix" class="artwork-image"></image>
 
   <!-- 卡片容器 -->
-  <view class="card">
+  <scroll-view scroll-y class="card">
     <!-- 选项卡 -->
     <view class="tab-bar">
       <view class="{{currentTab === 'introduction' ? 'active-tab' : 'inactive-tab'}}" bindtap="switchTab" data-tab="introduction">介绍</view>
@@ -19,6 +18,14 @@
           <text>创作时间：{{artworkInfo.createTime}}</text>
           <text>\n类型：{{artworkInfo.type}}</text>
           <text>\n尺寸：{{artworkInfo.size}}</text>
+          <text>\n尺寸：{{artworkInfo.size}}</text>
+          <text>\n尺寸：{{artworkInfo.size}}</text>
+          <text>\n</text>
+          <text>\n</text>
+          <text>\n</text>
+          <text>\n</text>
+
+
         </view>
         <view class="additional-info">
           <!-- 这里可以放作品的更多介绍 -->
@@ -32,13 +39,11 @@
         </view>
       </view>
     </view>
-
+  </scroll-view>
 
   <!-- 最下方：分享二维码和语音介绍 -->
   <view class="bottom-bar">
     <view class="qr-code" bindtap="showQrCode">分享二维码</view>
     <view class="voice-introduction" bindtap="playVoiceIntroduction">语音介绍</view>
   </view>
-</view>
-
 </view>

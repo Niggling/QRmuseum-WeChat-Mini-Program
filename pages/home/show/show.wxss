@@ -1,8 +1,14 @@
-/* wxss */
+.scroll-view {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%; /* 添加height: 100%; */
 }
 
 .artwork-image {
@@ -12,11 +18,20 @@
 }
 
 .card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  background-color: #fff;
-  border-radius: 20px; /* 设置卡片的圆角 */
-  overflow: hidden; /* 隐藏溢出部分，以展现圆角效果 */
-  margin-top: -20px; /* 上半部分略微盖住图片下侧的效果 */
+  max-height: 70vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+  transform: translateY(100%);
+}
+
+.container:hover .card {
+  transform: translateY(0);
 }
 
 .tab-bar {
@@ -57,18 +72,19 @@
 }
 
 .bottom-bar {
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px;
   box-sizing: border-box;
+  background-color: #fff;
 }
 
 .qr-code,
 .voice-introduction {
-  flex: 1;
-  margin: 0 5px;
   padding: 10px;
   background-color: #007AFF;
   color: #fff;
