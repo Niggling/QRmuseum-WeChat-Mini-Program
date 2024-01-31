@@ -71,23 +71,38 @@
   margin-top: 10px;
 }
 
+/* wxss */
 .bottom-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 10px;
+  justify-content: space-around; /* 通过 space-around 而不是 space-between，使得两侧有相同的空间 */
+  padding: 0px;
   box-sizing: border-box;
   background-color: #fff;
+  border-top: 1px solid rgb(172, 165, 165); /* 添加上边框 */
+  position: relative; /* 添加相对定位，为了子元素绝对定位时的参考 */
+}
+
+.bottom-bar::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 10px; /* 调整此值以增加竖线与上边框的间隙 */
+  bottom: 5px; /* 调整此值以增加竖线与下边框的间隙 */
+  width: 1px;
+  background-color: rgb(218, 196, 196); /* 竖线颜色 */
 }
 
 .qr-code,
 .voice-introduction {
   padding: 10px;
-  background-color: #007AFF;
-  color: #fff;
+  background-color: #fff; /* 白底 */
+  color: #000; /* 黑字 */
   border-radius: 5px;
   cursor: pointer;
+  margin: 0 5px; /* 通过调整 margin，使两个按钮往中间靠拢 */
+  /* border: 1px solid #000; 黑边框 */
 }
