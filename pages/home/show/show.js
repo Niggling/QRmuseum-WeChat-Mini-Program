@@ -3,9 +3,11 @@ Page({
   data: {
     currentTab: 'introduction',
     artworkInfo: {
-      createTime: '2023年9月3日',
+      name: '唐卡示例',
+      createTime: '2023-09-03',
       type: '藏画',
       size: '100厘米×70厘米',
+      information: '这里是一大段介绍，这里是一大段介绍，这里是一大段介绍，这里是一大段介绍，这里是一大段介绍，这里是一大段介绍。',
     },
     scale: 1,
   },

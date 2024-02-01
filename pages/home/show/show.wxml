@@ -12,22 +12,26 @@
 
     <!-- 选项卡内容 -->
     <view class="tab-content">
-      <!-- 介绍选项卡 -->
-      <view wx:if="{{currentTab === 'introduction'}}" class="tab-panel">
-        <view class="artwork-info">
-          <text>创作时间：{{artworkInfo.createTime}}</text>
-          <text>\n类型：{{artworkInfo.type}}</text>
-          <text>\n尺寸：{{artworkInfo.size}}</text>
-          <text>\n尺寸：{{artworkInfo.size}}</text>
-          <text>\n尺寸：{{artworkInfo.size}}</text>
-          <!-- <text>\n</text>
-          <text>\n</text> -->
+   <!-- 介绍选项卡 -->
+<view wx:if="{{currentTab === 'introduction'}}" class="tab-panel">
+  <view class="artwork-info">
+    <text style="font-size: 18px; font-weight: bold; color: black;" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{artworkInfo.name}}</text>
+    <text style="font-size: 14px; color: grey;" decode="{{true}}">\n\n&nbsp;&nbsp;&nbsp;&nbsp;创作时间&nbsp;&nbsp;</text>
+    <text style="font-size: 14px; color: black;" decode="{{true}}">{{artworkInfo.createTime}}</text>
+    <text style="font-size: 14px; color: grey;" decode="{{true}}">\n\n&nbsp;&nbsp;&nbsp;&nbsp;类型&nbsp;&nbsp;</text>
+    <text style="font-size: 14px;  color: black;" decode="{{true}}">{{artworkInfo.type}}</text>
+    <text style="font-size: 14px; color: grey;" decode="{{true}}">\n\n&nbsp;&nbsp;&nbsp;&nbsp;尺寸&nbsp;&nbsp;</text>
+    <text style="font-size: 14px;color: black;" decode="{{true}}">{{artworkInfo.size}}</text>
+    <text style="font-size: 14px; color: grey;" decode="{{true}}">\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    <text style="font-size: 14px; color: black;" decode="{{true}}">{{artworkInfo.information}}</text>
+  </view>
+  <view class="additional-info">
+    <!-- 这里可以放作品的更多介绍 -->
+  </view>
+</view>
 
-        </view>
-        <view class="additional-info">
-          <!-- 这里可以放作品的更多介绍 -->
-        </view>
-      </view>
+
+
 
       <!-- 关于作者选项卡 -->
       <view wx:if="{{currentTab === 'aboutAuthor'}}" class="tab-panel">
