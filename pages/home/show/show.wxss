@@ -1,3 +1,44 @@
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  cursor: pointer; /* 添加这一行以显示点击效果 */
+}
+
+.image-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* 设置一个较高的 z-index 以确保在其他元素之上 */
+}
+
+.popup-image {
+  width: 100vw; /* 设置图片宽度为屏幕宽度 */
+  height: 100vh; /* 设置图片高度为屏幕高度 */
+
+}
+
+
+/* 点击浮动层隐藏图片浮动层 */
+.image-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* 设置一个较高的 z-index 以确保在其他元素之上 */
+  cursor: pointer;
+}
+
+
 .artwork-image {
   width: 100%;
   height: auto;
@@ -89,12 +130,6 @@
   margin-top: 10px;
 }
 
-
-
-
-
-/* wxss */
-/* wxss */
 .bottom-bar {
   position: sticky; /* 修改为 sticky */
   bottom: 0;

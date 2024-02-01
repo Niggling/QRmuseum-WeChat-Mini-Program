@@ -1,6 +1,12 @@
 <view class="container">
   <!-- 图片部分 -->
-  <image src="../../../images/tangka1.png" mode="widthFix" class="artwork-image"></image>
+  <view class="image-container" bindtap="showImagePopup">
+  <image src="../../../images/tangka1.png" mode="widthFix" class="artwork-image" 	show-menu-by-longpress="true"	></image>
+</view>
+
+<view wx:if="{{showPopup}}" class="image-popup" bindtap="hideImagePopup">
+  <image src="../../../images/tangka1.png" mode="aspectFit" class="popup-image" show-menu-by-longpress="true"></image>
+</view>
 
   <!-- 卡片容器 -->
   <view class="card-container">
