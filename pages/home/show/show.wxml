@@ -3,7 +3,7 @@
   <image src="../../../images/tangka1.png" mode="widthFix" class="artwork-image"></image>
 
   <!-- 卡片容器 -->
-  <scroll-view scroll-y class="card">
+  <view class="card-container">
     <!-- 选项卡 -->
     <view class="tab-bar">
       <view class="{{currentTab === 'introduction' ? 'active-tab' : 'inactive-tab'}}" bindtap="switchTab" data-tab="introduction">介绍</view>
@@ -22,9 +22,6 @@
           <text>\n尺寸：{{artworkInfo.size}}</text>
           <text>\n</text>
           <text>\n</text>
-          <text>\n</text>
-          <text>\n</text>
-
 
         </view>
         <view class="additional-info">
@@ -39,7 +36,7 @@
         </view>
       </view>
     </view>
-  </scroll-view>
+  </view>
 
   <!-- 最下方：分享二维码和语音介绍 -->
   <view class="bottom-bar">
