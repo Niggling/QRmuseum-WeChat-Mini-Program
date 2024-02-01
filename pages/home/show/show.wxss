@@ -60,8 +60,9 @@
 }
 
 /* wxss */
+/* wxss */
 .bottom-bar {
-  position: fixed;
+  position: sticky; /* 修改为 sticky */
   bottom: 0;
   left: 0;
   width: 100%;
@@ -71,8 +72,9 @@
   box-sizing: border-box;
   background-color: #fff;
   border-top: 1px solid rgb(172, 165, 165); /* 添加上边框 */
-  position: relative; /* 添加相对定位，为了子元素绝对定位时的参考 */
+  z-index: 10; /* 提高 z-index 以保证在其他元素之上 */
 }
+
 
 .bottom-bar::before {
   content: '';
