@@ -6,13 +6,13 @@
     </view> -->
     <view class="cards">
       <view class="card-item">
-        <view class="menu-item" bindtap="navigateToClassify">
+        <view class="menu-item" bindtap="navigateToClassify1">
           <image src="../../../images/tangka.png" class="icon" />
           <text>唐卡</text>
         </view>
       </view>
       <view class="card-item">
-        <view class="menu-item" bindtap="navigateToClassify">
+        <view class="menu-item" bindtap="navigateToClassify2">
           <image src="../../../images/duixiu.png" class="icon" />
           <text>堆绣</text>
         </view>

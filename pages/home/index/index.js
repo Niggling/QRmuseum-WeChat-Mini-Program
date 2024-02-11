@@ -16,24 +16,29 @@ Page({
   },
 
   // 点击唐卡按钮事件处理函数
-  navigateToClassify: function () {
-    // 发送 HTTP 请求到后端
-    wx.request({
-      url: 'http://localhost:8080/exInformation/queryExInformation?type=1',
-      method: 'GET',
-      success: (res) => {
-        console.log('后端响应：', res.data);
-        // 在这里可以根据后端响应执行相应的逻辑
-      },
-      fail: (error) => {
-        console.error('请求失败：', error);
-        // 在这里处理请求失败的情况
-      }
-    });
+  
 
-    // 导航到分类页面
+  //   // 导航到分类页面
+  //   wx.navigateTo({
+  //     url: '/pages/home/classify/classify',
+  //   }); 
+  // },
+
+
+// 首页的点击事件
+  navigateToClassify1: function () {
+    const type = 1; // 或者从元素中获取 type
     wx.navigateTo({
-      url: '/pages/home/classify/classify',
+      url: '/pages/home/classify/classify?type=' + type
     });
   },
+
+  navigateToClassify2: function () {
+    const type = 2; // 或者从元素中获取 type
+    wx.navigateTo({
+      url: '/pages/home/classify/classify?type=' + type
+    });
+  }
+
+
 });

@@ -1,72 +1,28 @@
 <view class="container">
-  <!-- 中间的两个元素 -->
-  <view class="card" bindtap="onTapMaitreyaCard">
-    <view class="image-container">
-      <image src="../../../images/tangka2.png" class="card-image"></image>
-    </view>
-    <view class="card-content">
-      <view class="card-title">弥勒佛</view>
-      <view class="card-description">作者：长寿 </view>
-      <text>   </text>
-      <text>弥勒佛，也称弥勒尊佛，即未来佛，藏语谓“强巴”。</text>
-      <!-- <view class="card-footer">2天前更新</view> -->
-    </view>
-  </view>
+  <!-- 使用 wx:for 进行循环渲染 -->
+  <view wx:for="{{exList.data}}" wx:key="id" class="card" bindtap="onTapMaitreyaCard" data-index="{{index}}">
 
-  <view class="card">
+    <!-- <view>测试：{{item.data}}</view> -->
     <view class="image-container">
-      <image src="../../../images/tangka3.png" class="card-image"></image>
-   </view>
-    <view class="card-content">
-      <view class="card-title">宗喀巴极乐世界</view>
-      <view class="card-description">作者：郭白 </view>
-      <text>   </text>
-      <text>中国工艺美术馆热贡艺术成果展</text>
-      <!-- <view class="card-footer">2天前更新</view> -->
+      <!-- 使用动态绑定的方式设置图片路径 -->
+      <image src="{{item.picturePath}}" class="card-image"></image>
     </view>
-  </view>
-
-  <view class="card">
-    <view class="image-container">
-      <image src="../../../images/tangka1.png" class="card-image"></image>
-   </view>
     <view class="card-content">
-      <view class="card-title">班禅大师</view>
-      <view class="card-description">作者：宽太加 </view>
-      <text>   </text>
-      <text>中国工艺美术馆热贡艺术成果展</text>
-      <!-- <view class="card-footer">2天前更新</view> -->
-    </view>
-  </view>
-
-  <view class="card">
-    <view class="image-container">
-      <image src="../../../images/luohan.png" class="card-image"></image>
-   </view>
-    <view class="card-content">
-      <view class="card-title">团体参观预约</view>
-      <view class="card-description">为团体提供预约参观，文明、安全的观览体验，团队参观预约请提前</view>
-      <!-- <view class="card-footer">2天前更新</view> -->
-    </view>
-  </view>
-
-  <view class="card">
-    <view class="image-container">
-      <image src="../../../images/yishu.png" class="card-image"></image>
-   </view>
-    <view class="card-content">
-      <view class="card-title">团体参观预约</view>
-      <view class="card-description">为团体提供预约参观，文明、安全的观览体验，团队参观预约请提前</view>
+      <!-- 使用动态绑定的方式设置标题和描述 -->
+      <view class="card-title">{{item.name}}</view>
+      <view class="card-description">作者：{{item.authorName}}</view>
+      <text>{{item.information}}</text>
       <!-- <view class="card-footer">2天前更新</view> -->
     </view>
   </view>
 
   <!-- 你提供的底部菜单代码 -->
   <view class="footer">
-    <view class="footer-item">
+    <view class="footer-item" bindtap="goToHomePage">
       <image src="../../../images/Home.png" class="footer-icon"></image>
       <text>主页</text>
     </view>
+
     <view class="footer-item" bindtap="scanCodeHandler">
       <image src="../../../images/QR.png" class="footer-icon"></image>
       <text>扫码</text>
