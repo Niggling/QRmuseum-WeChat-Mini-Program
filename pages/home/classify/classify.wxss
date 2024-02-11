@@ -112,6 +112,16 @@ page {
   font-size: 12px;
 }
 
+.card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /* 控制显示的行数 */
+  max-height: 2.8em; /* 控制显示的高度，这里假设一行高度为1.4em */
+  max-width: 10em;
+}
+
 .card-title {
   font-weight: bold;
   font-size: 20px;

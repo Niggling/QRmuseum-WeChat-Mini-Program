@@ -11,7 +11,7 @@
       <!-- 使用动态绑定的方式设置标题和描述 -->
       <view class="card-title">{{item.name}}</view>
       <view class="card-description">作者：{{item.authorName}}</view>
-      <text>{{item.information}}</text>
+      <text class="card-text">{{item.information}}</text>
       <!-- <view class="card-footer">2天前更新</view> -->
     </view>
   </view>

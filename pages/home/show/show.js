@@ -8,6 +8,7 @@ Page({
       type: '藏画',
       size: '100cm×70cm',
       information: '这里是一大段介绍，这里是一大段介绍，这里是一大段介绍，这里是一大段介绍，这里是一大段介绍，这里是一大段介绍。',
+      picturePath:'',
     },
     authorInfo: {
       name: '启加',
@@ -32,18 +33,36 @@ Page({
 
   onLoad: function (options) {
     const id = options.id; // 获取传递的参数
-    console.log("打印id");
-    console.log(id);
     // 在这里可以根据 type 向后端请求数据并进行相应的处理
     this.getExById(id);
   },
 
+  // getExById: function (id) {
+  //   // 构建请求的URL，将参数type动态添加到URL中
+  //   const url = 'http://localhost:8080/exInformation/selectExInformationAndAuthor?id=' + id;
+  //   // 发送 HTTP 请求到后端
+  //   wx.request({
+  //     url: url,
+  //     method: 'GET',
+  //     success: (res) => {
+  //       console.log('后端响应：', res.data);
+  //       // 在这里更新页面的数据
+  //       this.setData({
+  //         exList: res.data // 更新页面数据
+  //       });
+
+  //     },
+  //     fail: (error) => {
+  //       console.error('请求失败：', error);
+  //       // 在这里处理请求失败的情况
+  //     }
+  //   });
+  // },
+
   getExById: function (id) {
-
-
     // 构建请求的URL，将参数type动态添加到URL中
     const url = 'http://localhost:8080/exInformation/selectExInformationAndAuthor?id=' + id;
-
+  
     // 发送 HTTP 请求到后端
     wx.request({
       url: url,
@@ -51,10 +70,17 @@ Page({
       success: (res) => {
         console.log('后端响应：', res.data);
         // 在这里更新页面的数据
+        const { data } = res.data;
         this.setData({
-          exList: res.data // 更新页面数据
+          'artworkInfo.name': data.name,
+          'artworkInfo.createTime': data.createTime,
+          'artworkInfo.type': data.type,
+          'artworkInfo.size': data.size,
+          'artworkInfo.information': data.information,
+          'artworkInfo.picturePath': data.picturePath,
+          'authorInfo.name': data.authorName,
+          'authorInfo.information': data.authorIntroduction,
         });
-
       },
       fail: (error) => {
         console.error('请求失败：', error);
@@ -62,6 +88,7 @@ Page({
       }
     });
   },
+  
 
   switchTab(event) {
     const tab = event.currentTarget.dataset.tab;
