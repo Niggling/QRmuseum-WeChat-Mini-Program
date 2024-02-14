@@ -1,4 +1,5 @@
 // pages/home/show/show.js
+
 Page({
   data: {
     currentTab: 'introduction',
@@ -12,7 +13,7 @@ Page({
     },
     authorInfo: {
       name: '启加',
-      information: '启加大师（1939年10月20日—2007年12月13日），中国青海省黄南州热贡人，中国工艺美术大师，国家级非物质文化遗产项目热贡艺术代表性传承人。1939年出生在热贡年都乎乡尕沙日村一个有着近500年传承历史的“神画师”家族，是世界上唯一保持着完整的唐卡传承法脉谱系，是构成热贡画派的重要一支。从家族第一代师祖降央贡却青佩开始，历经贡却金巴、罗桑热赛、降央热杰、索南热丹、塔克热赛、旺智坚参、更登隆朵热赛、香曲热赛、格乐、罗藏西热、更藏，“神画师”家族传承至启加已13代、传承近500年，绵延有序， 启加大师是热贡“神画师”家族第十三代传承人，8岁在尕沙日寺院出家为僧，在其叔罗藏西热大师门下学习唐卡绘画，12岁跟随罗藏西热大师到西藏桑耶寺、甘肃拉卜楞寺、青海塔尔寺等藏区各大寺院绘画唐卡。一生中描绘出两千多幅匠心独运、精美绝伦的唐卡艺术珍品留传于世。1987年启加大师受到了时任中共中央总书记胡耀邦的接见并合影留念，总书记还亲笔题写“热贡艺术馆”名。2006年12月经第五届中国工艺美术大师评审工作领导小组批准，授予启加大师中国工艺美术大师荣誉称号。2007年被国家文化部命名为国家级非物质文化遗产项目热贡艺术代表性传承人。 启加大师屡获国内外殊荣和赞誉，其一生绘画的2000多幅精美绝伦、叹为观止的唐卡艺术珍品多被国家级名刹古寺珍藏，并被美国、法国、日本、新加坡及东南亚等国家博物馆和美术馆等收藏机构收藏。',
+      information: '启加大师（1939年10月20日—2007年12月13日），中国青海省黄南州热贡人，中国工艺美术大师，国家级非物质文化遗产项目热贡艺术代表性传承人。',
     },
     scale: 1,
     showPopup: false, // 控制图片浮动层的显示与隐藏
@@ -42,29 +43,6 @@ Page({
       delta: 1, // 返回的页面数
     });
   },
-
-
-  // getExById: function (id) {
-  //   // 构建请求的URL，将参数type动态添加到URL中
-  //   const url = 'http://localhost:8080/exInformation/selectExInformationAndAuthor?id=' + id;
-  //   // 发送 HTTP 请求到后端
-  //   wx.request({
-  //     url: url,
-  //     method: 'GET',
-  //     success: (res) => {
-  //       console.log('后端响应：', res.data);
-  //       // 在这里更新页面的数据
-  //       this.setData({
-  //         exList: res.data // 更新页面数据
-  //       });
-
-  //     },
-  //     fail: (error) => {
-  //       console.error('请求失败：', error);
-  //       // 在这里处理请求失败的情况
-  //     }
-  //   });
-  // },
 
   getExById: function (id) {
     // 构建请求的URL，将参数type动态添加到URL中
@@ -105,8 +83,22 @@ Page({
   },
 
   showQrCode() {
-    // 处理分享二维码的逻辑...
+    // 生成二维码
+    // this.generateQRCode(id);
   },
+
+  generateQRCode(id) {
+    const qrCodeCanvasId = 'qrCodeCanvas'; // canvas组件的ID
+    const qrCodeText = 'https://your-miniapp-url.com/product?id=' + id; // 小程序页面的URL，携带产品ID参数
+
+    // 调用qrcode.js库的API生成二维码
+    QRCode.api.draw(qrCodeText, {
+      ctx: wx.createCanvasContext(qrCodeCanvasId),
+      width: 200, // 二维码宽度
+      height: 200, // 二维码高度
+    });
+  },
+
 
   playVoiceIntroduction() {
     // 处理语音介绍的逻辑...

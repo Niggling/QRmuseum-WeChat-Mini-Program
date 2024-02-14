@@ -1,43 +1,43 @@
 <!-- index.wxml -->
 <view class="container">
-  <image class="background" src="../../../images/background.png" mode="widthFix">  </image>
+  <!-- <image class="background" src="../../../images/background.png" mode="widthFix">  </image> -->
     <!-- <view class="header">
       <text class="header-text">码上展馆</text>
     </view> -->
     <view class="cards">
       <view class="card-item">
         <view class="menu-item" bindtap="navigateToClassify1">
-          <image src="../../../images/tangka.png" class="icon" />
+          <image src="cloud://qrmuseum-7gpv1o4ze1ab8e8f.7172-qrmuseum-7gpv1o4ze1ab8e8f-1324366499/images/tangka.png" class="icon" />
           <text>唐卡</text>
         </view>
       </view>
       <view class="card-item">
         <view class="menu-item" bindtap="navigateToClassify2">
-          <image src="../../../images/duixiu.png" class="icon" />
+          <image src="cloud://qrmuseum-7gpv1o4ze1ab8e8f.7172-qrmuseum-7gpv1o4ze1ab8e8f-1324366499/images/duixiu.png" class="icon" />
           <text>堆绣</text>
         </view>
       </view>
       <view class="card-item">
         <view class="menu-item">
-          <image src="../../../images/nisu.png" class="icon" />
+          <image src="cloud://qrmuseum-7gpv1o4ze1ab8e8f.7172-qrmuseum-7gpv1o4ze1ab8e8f-1324366499/images/nisu.png" class="icon" />
           <text>泥塑</text>
         </view>
       </view>
       <view class="card-item">
         <view class="menu-item">
-          <image src="../../../images/caihui.png" class="icon" />
+          <image src="cloud://qrmuseum-7gpv1o4ze1ab8e8f.7172-qrmuseum-7gpv1o4ze1ab8e8f-1324366499/images/caihui.png" class="icon" />
           <text>彩绘</text>
         </view>
       </view>
       <view class="card-item">
         <view class="menu-item">
-          <image src="../../../images/bihua.png" class="icon" />
+          <image src="cloud://qrmuseum-7gpv1o4ze1ab8e8f.7172-qrmuseum-7gpv1o4ze1ab8e8f-1324366499/images/bihua.png" class="icon" />
           <text>壁画</text>
         </view>
       </view>
       <view class="card-item">
         <view class="menu-item">
-          <image src="../../../images/yishu.png" class="icon" />
+          <image src="cloud://qrmuseum-7gpv1o4ze1ab8e8f.7172-qrmuseum-7gpv1o4ze1ab8e8f-1324366499/images/yishu.png" class="icon" />
           <text>热贡艺术</text>
         </view>
       </view>
