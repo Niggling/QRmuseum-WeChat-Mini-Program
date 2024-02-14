@@ -37,6 +37,13 @@ Page({
     this.getExById(id);
   },
 
+  navigateBack() {
+    wx.navigateBack({
+      delta: 1, // 返回的页面数
+    });
+  },
+
+
   // getExById: function (id) {
   //   // 构建请求的URL，将参数type动态添加到URL中
   //   const url = 'http://localhost:8080/exInformation/selectExInformationAndAuthor?id=' + id;

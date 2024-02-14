@@ -1,4 +1,7 @@
 <view class="container">
+  <view class="back-button" bindtap="navigateBack">
+    <image src="../../../images/arrowleft.png" mode="aspectFit" class="back-icon"></image>
+  </view>
   <!-- 使用 wx:for 进行循环渲染 -->
   <view wx:for="{{exList.data}}" wx:key="id" class="card" bindtap="onTapMaitreyaCard" data-index="{{index}}">
 

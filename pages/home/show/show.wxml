@@ -1,4 +1,8 @@
 <view class="container">
+
+  <view class="back-button" bindtap="navigateBack">
+    <image src="../../../images/arrowleft.png" mode="aspectFit" class="back-icon"></image>
+  </view>
   <!-- 图片部分 -->
   <view class="image-container" bindtap="showImagePopup">
   <image src="{{artworkInfo.picturePath}}" mode="widthFix" class="artwork-image" 	show-menu-by-longpress="true"	></image>

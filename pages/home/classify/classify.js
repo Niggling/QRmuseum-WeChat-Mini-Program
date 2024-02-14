@@ -22,6 +22,12 @@ Page({
     });
   },
 
+  navigateBack() {
+    wx.navigateBack({
+      delta: 1, // 返回的页面数
+    });
+  },
+
   onTapMaitreyaCard(event) {
     const index = event.currentTarget.dataset.index; // 获取当前点击的卡片在列表中的索引
     const id = this.data.exList.data[index].id; // 获取对应卡片的id

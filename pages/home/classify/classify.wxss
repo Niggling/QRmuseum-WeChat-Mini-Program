@@ -1,5 +1,14 @@
-/* index.wxss */
-/* index.wxss */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+}
 .container {
   display: flex;
   flex-direction: column;
