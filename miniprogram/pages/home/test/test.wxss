@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box_1 {
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
+  margin-bottom: 10px;
+}
+
+.box_2 {
+  width: 100px;
+  height: 100px;
+  background-color: #0f0;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.paragraph {
+  font-size: 14px;
+  text-align: justify;
+  margin-bottom: 10px;
+}

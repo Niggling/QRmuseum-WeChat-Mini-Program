@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="box_1"></view>
+  <view class="box_2"></view>
+  <view class="title">一级标题</view>
+  <view class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</view>
+  <view class="box_1"></view>
+  <view class="box_2"></view>
+  <view class="title">一级标题</view>
+  <view class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</view>
+</view>

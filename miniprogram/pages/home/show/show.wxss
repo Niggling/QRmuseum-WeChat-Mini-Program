@@ -1,0 +1,180 @@
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  cursor: pointer; /* 添加这一行以显示点击效果 */
+}
+
+.image-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* 设置一个较高的 z-index 以确保在其他元素之上 */
+}
+
+.popup-image {
+  width: 100vw; /* 设置图片宽度为屏幕宽度 */
+  height: 100vh; /* 设置图片高度为屏幕高度 */
+
+}
+
+
+/* 点击浮动层隐藏图片浮动层 */
+.image-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* 设置一个较高的 z-index 以确保在其他元素之上 */
+  cursor: pointer;
+}
+
+
+.artwork-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: -15px; /* 调整这个值来改变图片位置 */
+  margin-bottom: 0px; /* 调整这个值来改变遮挡效果 */
+}
+
+.author-info {
+  overflow: hidden;
+}
+
+.author-image {
+  float: left;
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 100px;
+  margin-right: 15px; /* 调整此值以增加图像和文字的间距 */
+}
+
+.text-container {
+  margin-top: 0px; /* 调整此值以调整文字与图像的位置 */
+}
+
+.text-container text {
+  font-size: 18px; /* 调整此值以调整文字大小 */
+  color: black;
+  display: block;
+  line-height: 2;/* 行间距 */
+}
+
+.text-container text:nth-child(2) {
+  font-size: 14px; /* 调整此值以调整第二行文字大小 */
+}
+
+
+.card-container {
+  position: relative;
+  top: -15px; /* 调整这个值来改变卡片的位置 */
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+  transform: translateY(0);
+}
+
+.card {
+  max-height: 70vh;
+}
+
+.tab-bar {
+  display: flex;
+  margin-top: 5px;
+}
+
+.active-tab {
+  color: #007AFF;
+  border-bottom: 2px solid #007AFF;
+  padding: 10px;
+  margin-left: 54px;
+  margin-right: 54px;
+}
+
+.inactive-tab {
+  color: #333;
+  padding: 10px;
+  margin-left: 54px;
+  margin-right: 54px;
+}
+
+.tab-content {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 20px 20px 0 0;
+}
+
+.tab-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artwork-info,
+.author-info,
+.additional-info {
+  margin-top: 10px;
+}
+
+.bottom-bar {
+  position: sticky; /* 修改为 sticky */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around; /* 通过 space-around 而不是 space-between，使得两侧有相同的空间 */
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-top: 1px solid rgb(172, 165, 165); /* 添加上边框 */
+  z-index: 10; /* 提高 z-index 以保证在其他元素之上 */
+}
+
+
+.bottom-bar::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 10px; /* 调整此值以增加竖线与上边框的间隙 */
+  bottom: 5px; /* 调整此值以增加竖线与下边框的间隙 */
+  width: 1px;
+  background-color: rgb(218, 196, 196); /* 竖线颜色 */
+}
+
+.qr-code,
+.voice-introduction {
+  padding: 10px;
+  background-color: #fff; /* 白底 */
+  color: #000; /* 黑字 */
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px; /* 通过调整 margin，使两个按钮往中间靠拢 */
+  /* border: 1px solid #000; 黑边框 */
+}

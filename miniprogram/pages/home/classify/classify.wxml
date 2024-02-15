@@ -1,0 +1,38 @@
+<view class="container">
+  <!-- <view class="back-button" bindtap="navigateBack">
+    <image src="../../../images/arrowleft.png" mode="aspectFit" class="back-icon"></image>
+  </view> -->
+  <!-- 使用 wx:for 进行循环渲染 -->
+  <view wx:for="{{exList.data}}" wx:key="id" class="card" bindtap="onTapMaitreyaCard" data-index="{{index}}">
+
+    <!-- <view>测试：{{item.data}}</view> -->
+    <view class="image-container">
+      <!-- 使用动态绑定的方式设置图片路径 -->
+      <image src="{{item.picturePath}}" class="card-image"></image>
+    </view>
+    <view class="card-content">
+      <!-- 使用动态绑定的方式设置标题和描述 -->
+      <view class="card-title">{{item.name}}</view>
+      <view class="card-description">作者：{{item.authorName}}</view>
+      <text class="card-text">{{item.information}}</text>
+      <!-- <view class="card-footer">2天前更新</view> -->
+    </view>
+  </view>
+
+  <!-- 你提供的底部菜单代码 -->
+  <view class="footer">
+    <view class="footer-item" bindtap="goToHomePage">
+      <image src="../../../images/Home.png" class="footer-icon"></image>
+      <text>主页</text>
+    </view>
+
+    <view class="footer-item" bindtap="scanCodeHandler">
+      <image src="../../../images/QR.png" class="footer-icon"></image>
+      <text>扫码</text>
+    </view>
+    <view class="footer-item">
+      <image src="../../../images/Personal.png" class="footer-icon"></image>
+      <text>个人</text>
+    </view>
+  </view>
+</view>

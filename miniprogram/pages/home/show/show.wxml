@@ -1,0 +1,64 @@
+<view class="container">
+
+  <!-- <view class="back-button" bindtap="navigateBack">
+    <image src="../../../images/arrowleft.png" mode="aspectFit" class="back-icon"></image>
+  </view> -->
+  <!-- 图片部分 -->
+  <view class="image-container" bindtap="showImagePopup">
+  <image src="{{artworkInfo.picturePath}}" mode="widthFix" class="artwork-image" 	show-menu-by-longpress="true"	></image>
+</view>
+
+<view wx:if="{{showPopup}}" class="image-popup" bindtap="hideImagePopup">
+  <image src="{{artworkInfo.picturePath}}" mode="aspectFit" class="popup-image" show-menu-by-longpress="true"></image>
+</view>
+
+  <!-- 卡片容器 -->
+  <view class="card-container">
+    <!-- 选项卡 -->
+    <view class="tab-bar">
+      <view class="{{currentTab === 'introduction' ? 'active-tab' : 'inactive-tab'}}" bindtap="switchTab" data-tab="introduction">介绍</view>
+      <view class="{{currentTab === 'aboutAuthor' ? 'active-tab' : 'inactive-tab'}}" bindtap="switchTab" data-tab="aboutAuthor">作者</view>
+    </view>
+
+    <!-- 选项卡内容 -->
+    <view class="tab-content">
+<!-- 介绍选项卡 -->
+<view wx:if="{{currentTab === 'introduction'}}" class="tab-panel" style="padding-left: 20px; padding-right: 20px;">
+  <view class="artwork-info" style="font-family: '等线';">
+    <text style="font-size: 18px; font-weight: bold; color: black;" decode="{{true}}">{{artworkInfo.name}}</text>
+    <text style="font-size: 14px; color: grey;" decode="{{true}}">\n\n创作时间&nbsp;&nbsp;</text>
+    <text style="font-size: 14px; color: black;" decode="{{true}}">{{artworkInfo.createTime}}</text>
+    <text style="font-size: 14px; color: grey;" decode="{{true}}">\n\n类型&nbsp;&nbsp;</text>
+    <text style="font-size: 14px; color: black;" decode="{{true}}">{{artworkInfo.type}}</text>
+    <text style="font-size: 14px; color: grey;" decode="{{true}}">\n\n尺寸&nbsp;&nbsp;</text>
+    <text style="font-size: 14px;color: black;" decode="{{true}}">{{artworkInfo.size}}</text>
+    <text style="font-size: 14px; color: grey;" decode="{{true}}">\n\n&nbsp;&nbsp;</text>
+    <text style="font-size: 14px; color: black;line-height: 2;" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{artworkInfo.information}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+  </view>
+  <view class="additional-info">
+    <!-- 这里可以放作品的更多介绍 -->
+  </view>
+</view>
+
+<!-- 关于作者选项卡 -->
+<view wx:if="{{currentTab === 'aboutAuthor'}}" class="tab-panel" style="padding-left: 20px; padding-right: 20px;">
+  <view class="author-info" style="font-family: '等线';">
+    <image src="../../../images/author1.jpg" mode="widthFix" class="author-image"></image>
+    <view class="text-container">
+      <text style="font-size: 18px; font-weight: bold; color: black;" decode="{{true}}">{{authorInfo.name}}</text>
+      <text style="font-size: 14px; color: grey;" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{authorInfo.information}}</text>
+    </view>
+  </view>
+</view>
+
+
+
+</view>
+  </view>
+
+  <!-- 最下方：分享二维码和语音介绍 -->
+  <view class="bottom-bar">
+    <view class="qr-code" bindtap="showQrCode">分享二维码</view>
+    <view class="voice-introduction" bindtap="playVoiceIntroduction">语音介绍</view>
+  </view>
+</view>

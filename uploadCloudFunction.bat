@@ -1,0 +1,1 @@
+"C:\wechat develop\微信web开发者工具\cli.bat" cloud functions deploy --e qrmuseum-7gpv1o4ze1ab8e8f --n quickstartFunctions --r --project "C:\Code\QRMuseum1.0" --report_first --report
