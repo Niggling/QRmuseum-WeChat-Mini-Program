@@ -43,7 +43,7 @@
 <!-- 关于作者选项卡 -->
 <view wx:if="{{currentTab === 'aboutAuthor'}}" class="tab-panel" style="padding-left: 20px; padding-right: 20px;">
   <view class="author-info" style="font-family: '等线';">
-    <image src="../../../images/author1.jpg" mode="widthFix" class="author-image"></image>
+    <image src="{{authorInfo.picturePath}}" mode="widthFix" class="author-image"></image>
     <view class="text-container">
       <text style="font-size: 18px; font-weight: bold; color: black;" decode="{{true}}">{{authorInfo.name}}</text>
       <text style="font-size: 14px; color: grey;" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{authorInfo.information}}</text>

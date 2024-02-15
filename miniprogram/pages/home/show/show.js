@@ -14,6 +14,7 @@ Page({
     authorInfo: {
       name: '启加',
       information: '启加大师（1939年10月20日—2007年12月13日），中国青海省黄南州热贡人，中国工艺美术大师，国家级非物质文化遗产项目热贡艺术代表性传承人。',
+      picturePath:'',
     },
     scale: 1,
     showPopup: false, // 控制图片浮动层的显示与隐藏
@@ -65,6 +66,7 @@ Page({
           'artworkInfo.picturePath': data.picturePath,
           'authorInfo.name': data.authorName,
           'authorInfo.information': data.authorIntroduction,
+          'authorInfo.picturePath': data.authorPicturePath,
         });
       },
       fail: (error) => {
