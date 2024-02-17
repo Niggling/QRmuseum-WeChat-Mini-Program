@@ -13,7 +13,7 @@ Page({
       createTime: '2023-09-03',
       type: '藏画',
       size: '100cm×70cm',
-      information: '这里是一大段介绍，这里是一大段介绍，这里是一大段介绍，这里是一大段介绍，这里是一大段介绍，这里是一大段介绍。',
+      information: '服务器请求失败，请联系管理员。',
       picturePath:'',
     },
     authorInfo: {
