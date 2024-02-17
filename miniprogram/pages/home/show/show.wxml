@@ -50,15 +50,16 @@
     </view>
   </view>
 </view>
-
-
-
 </view>
+  </view>
+
+  <view wx:if="{{haveGetCodeSrc}}" class="image-popup" bindtap="clearCodeSrc">
+  <image src="{{codeSrc}}" mode="aspectFit" class="popup-image" show-menu-by-longpress="true"></image>
   </view>
 
   <!-- 最下方：分享二维码和语音介绍 -->
   <view class="bottom-bar">
-    <view class="qr-code" bindtap="showQrCode">分享二维码</view>
+    <view class="qr-code" bindtap="getCodeSrc">分享二维码</view>
     <view class="voice-introduction" bindtap="playVoiceIntroduction">语音介绍</view>
   </view>
 </view>

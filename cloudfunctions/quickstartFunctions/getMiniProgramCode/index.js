@@ -4,11 +4,13 @@ cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
 });
 
-// 获取小程序二维码云函数入口函数
 exports.main = async (event, context) => {
-  // 获取小程序二维码的buffer
+  const id = event.id; // 从事件参数中获取传递过来的 ID
+  // 拼接 ID 到指定的 path 后面
+  const path = 'pages/home/show/show' + '?id=' + id;
+  // 获取小程序二维码的 buffer
   const resp = await cloud.openapi.wxacode.get({
-    path: 'pages/index/index'
+    path: path
   });
   const { buffer } = resp;
   // 将图片上传云存储空间
@@ -16,5 +18,6 @@ exports.main = async (event, context) => {
     cloudPath: 'code.png',
     fileContent: buffer
   });
+  
   return upload.fileID;
 };
